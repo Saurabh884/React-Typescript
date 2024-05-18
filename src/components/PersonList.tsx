@@ -1,0 +1,16 @@
+
+
+type PersonListProps = {
+    names : {
+       first:string,
+       last:string 
+    }[]
+}
+
+export const PersonList = (props:PersonListProps) => {
+  return (
+    <div>
+        {props.names.map((name)=> <h3 key={name.first}>{name.first} {name.last}</h3> )}
+    </div>
+  )
+}
